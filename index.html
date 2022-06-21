@@ -56,13 +56,11 @@
         sun.position.set(0,0,0);
         scene.add(sun);
 
-        // 幹を作成
-        var boxgeometry = new THREE.BoxGeometry(0.15, 1.2, 0.15);
-        var boxmaterial = new THREE.MeshPhongMaterial({ color: 0x8b4513 });
-        var box = new THREE.Mesh(boxgeometry, boxmaterial);
-        box.castShadow = true;
-        box.position.set(3,0.6,0); //位置を指定
-        scene.add(box);   // シーンに追加
+        // 水星を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
 
 
         update();
