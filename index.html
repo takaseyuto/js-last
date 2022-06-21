@@ -47,7 +47,7 @@
         // sunテクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
         var suntexture = textureLoader.load("img/earth.png");
-        var matsun = new THREE.MeshPhongMaterial();
+        var matsun = new THREE.MeshLambertMaterial();
         matsun.map = suntexture;
 
         // 太陽を作成
@@ -125,7 +125,7 @@
 
         update();
 
-        // 毎フレーム時に実行されるループイベントです
+        // 毎フレーム時に実行されるループイベント
         function update() {
           // レンダリング
           renderer.render(scene, camera);
