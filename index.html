@@ -35,7 +35,7 @@
         const controls = new THREE.OrbitControls(camera, document.body); 
         
         // 点光源1
-        const pointlight1 = new THREE.PointLight(0xFFFFFF, 2, 50, 1.0);
+        var pointlight1 = new THREE.PointLight(0xFFFFFF, 2, 50, 1.0);
         pointLight1.position.set(0,0,0);
         // シーンに追加
         scene.add(pointLight1);
