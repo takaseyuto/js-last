@@ -46,7 +46,7 @@
         
         // sunテクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var suntexture = textureLoader.load("img/earth.jpg");
+        var suntexture = textureLoader.load("img/earth.png");
         var matsun = new THREE.MeshPhongMaterial();
         matsun.map = suntexture;
 
@@ -58,10 +58,64 @@
 
         // 水星を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,mat);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+
+        /*// 金星を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matsun);
         mercury.position.set(5,0,0);
         scene.add(mercury);
 
+        // 地球を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+
+        // 月を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+        
+        // 火星を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+
+        // 木星を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+        
+        // 土星を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+
+        // 天王星を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+        
+        // 海王星を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+
+        // 小惑星帯を作成
+        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
+        mercury.position.set(5,0,0);
+        scene.add(mercury);
+        */
 
         update();
 
