@@ -48,13 +48,13 @@
         
         // テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("world.jpg");
+        var texture = textureLoader.load("img/world.jpg");
         var matsun = new THREE.MeshPhongMaterial();
         matsun.map = texture;
 
         // 太陽を作成
-        var sunGeometry = new THREE.SphereGeometry(5,32,32);
-        var sun = new THREE.Mesh(sunGeometry,mat);
+        var sunGeometry = new THREE.SphereGeometry(50,32,32);
+        var sun = new THREE.Mesh(sunGeometry,matsun);
         sun.position.set(10,0,0);
         scene.add(sun);
 
