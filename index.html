@@ -56,6 +56,12 @@
         sun.position.set(0,0,0);
         scene.add(sun);
 
+        // mercuryテクスチャー読み込み
+        var textureLoader = new THREE.TextureLoader();  
+        var suntexture = textureLoader.load("img/earth.png");
+        var matsun = new THREE.MeshPhongMaterial();
+        matsun.map = suntexture;
+
         // 水星を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,mat);
