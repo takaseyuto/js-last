@@ -50,18 +50,6 @@
         var sun = new THREE.Mesh(sunGeometry,material);
         scene.add(sun);
 
-        // hanabiraを作成
-        for (let i = 0; i < 1000; i++) {
-          const sprite = new THREE.Sprite(material);
-          // ランダムな座標に配置
-          sprite.position.x = 1.5 * (Math.random()-0.5);
-          sprite.position.y = 1 * (Math.random()+0.8);
-          sprite.position.z = 1.5 * (Math.random()-0.5);
-          // スケールを調整
-          sprite.scale.set(0.1, 0.1, 0.1);
-            
-          scene.add(sprite);
-        }
         // 幹を作成
         var boxgeometry = new THREE.BoxGeometry(0.15, 1.2, 0.15);
         var boxmaterial = new THREE.MeshPhongMaterial({ color: 0x8b4513 });
