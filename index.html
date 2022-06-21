@@ -5,15 +5,15 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
- <h1>桜を作成</h1>
- ループで花びらを作った<br>
+ <h1>太陽系を作成</h1>
+ 
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
 
       function init() {
         // サイズを指定
-        const width = 800
+        const width = 1000
         const height = 600;
 
         // レンダラーを作成
@@ -21,8 +21,7 @@
         document.body.appendChild(renderer.domElement);
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(0xffffdd);
-
+        renderer.setClearColor(0x001e43);
 
         // シーンを作成
         const scene = new THREE.Scene();
