@@ -35,7 +35,7 @@
         const controls = new THREE.OrbitControls(camera, document.body); 
         
         // 点光源1
-        var pointLight1 = new THREE.PointLight(0xffffff,10,50,1);
+        var pointLight1 = new THREE.PointLight(0xffffff,10,10,1);
         // シーンに追加
         scene.add(pointLight1);
 
@@ -67,7 +67,7 @@
         var mercury = new THREE.Mesh(mercuryGeometry,matmercury);
         mercury.position.set(15,0,0);
         scene.add(mercury);
-        
+
 
         /*// 金星を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
