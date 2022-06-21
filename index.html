@@ -35,14 +35,13 @@
         const controls = new THREE.OrbitControls(camera, document.body); 
         
         // 点光源1
-        var pointLight1 = new THREE.PointLight(0xffffff,10,10,1);
+        var pointLight1 = new THREE.PointLight(0xffffff,10,100000,1);
         // シーンに追加
         scene.add(pointLight1);
 
         // helper
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
-
         
         // sunテクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
