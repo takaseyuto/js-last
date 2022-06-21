@@ -53,9 +53,9 @@
         matsun.map = texture;
 
         // 太陽を作成
-        var sunGeometry = new THREE.SphereGeometry(50,32,32);
+        var sunGeometry = new THREE.SphereGeometry(1,32,32);
         var sun = new THREE.Mesh(sunGeometry,matsun);
-        sun.position.set(10,0,0);
+        sun.position.set(0,0,0);
         scene.add(sun);
 
         // 幹を作成
