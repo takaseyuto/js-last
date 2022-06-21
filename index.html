@@ -47,7 +47,7 @@
         // sunテクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
         var suntexture = textureLoader.load("img/earth.png");
-        var matsun = new THREE.MeshLambertMaterial();
+        var matsun = new THREE.MeshBasicMaterial();
         matsun.map = suntexture;
 
         // 太陽を作成
