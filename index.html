@@ -35,7 +35,7 @@
         const controls = new THREE.OrbitControls(camera, document.body); 
         
         // 点光源1
-        var pointLight1 = new THREE.PointLight(0xffffff,5,10,1);
+        var pointLight1 = new THREE.PointLight(0xffffff,50,10,1);
         // シーンに追加
         scene.add(pointLight1);
 
@@ -49,7 +49,6 @@
         var matsun = new THREE.MeshBasicMaterial();
         matsun.map = suntexture;
 
-        
         // 太陽を作成
         var sunGeometry = new THREE.SphereGeometry(1,32,32);
         var sun = new THREE.Mesh(sunGeometry,matsun);
