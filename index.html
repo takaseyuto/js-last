@@ -58,7 +58,7 @@
         // mercuryテクスチャー読み込み
         //var textureLoader = new THREE.TextureLoader();  
         var mercurytexture = textureLoader.load("img/mercurymap.jpg");
-        var matmercury = new THREE.MeshPhongMaterial();
+        var matmercury = new THREE.MeshMatcapMaterial();
         matmercury.map = mercurytexture;
 
         // 水星を作成
