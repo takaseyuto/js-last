@@ -21,7 +21,7 @@
         document.body.appendChild(renderer.domElement);
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(0x000060);
+        renderer.setClearColor(0x000030);
 
         // シーンを作成
         const scene = new THREE.Scene();
@@ -36,7 +36,6 @@
         
         // 点光源1
         var pointLight1 = new THREE.PointLight(0xffffff);
-
         // シーンに追加
         scene.add(pointLight1);
 
@@ -46,10 +45,10 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        // 木をスプライトで作成
-        var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("img/sakurasozai.png");
-        const material = new THREE.SpriteMaterial({ map: texture,});
+        // 太陽を作成
+        var sunGeometry = new THREE.SphereGeometry(5,32,32);
+        var sun = new THREE.Mesh(sunGeometry,material);
+        scene.add(sun);
 
         // hanabiraを作成
         for (let i = 0; i < 1000; i++) {
