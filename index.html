@@ -35,10 +35,15 @@
         const controls = new THREE.OrbitControls(camera, document.body); 
         
         // 点光源1
-        var pointlight1 = new THREE.PointLight(0xFFFFFF, 2, 50, 1.0);
-        pointLight1.position.set(0,0,0);
+        var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+        directionalLight1.position.set(10, 10, 10);
         // シーンに追加
-        scene.add(pointLight1);
+        scene.add(directionalLight1);
+        // 平行光源2
+        var directionalLight2 = new THREE.DirectionalLight(0x888888);
+        directionalLight2.position.set(-10, -10, 10);
+        // シーンに追加
+        scene.add(directionalLight2);
 
         // helper
         const gridHelper = new THREE.GridHelper(2,10); // size, step
