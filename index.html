@@ -45,10 +45,17 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
+        
+        // テクスチャー読み込み
+        var textureLoader = new THREE.TextureLoader();  
+        var texture = textureLoader.load("world.jpg");
+        var matsun = new THREE.MeshPhongMaterial();
+        matsun.map = texture;
+
         // 太陽を作成
         var sunGeometry = new THREE.SphereGeometry(5,32,32);
         var sun = new THREE.Mesh(sunGeometry,mat);
-        sun.position.set(0,0,0);
+        sun.position.set(10,0,0);
         scene.add(sun);
 
         // 幹を作成
