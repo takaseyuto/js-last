@@ -69,6 +69,7 @@
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matmercury);
         mercury.position.set(10,0,0);
+        mercury.castShadow = true;
         scene.add(mercury);
 
         // venusテクスチャー読み込み
@@ -80,6 +81,7 @@
         var venusGeometry = new THREE.SphereGeometry(1,32,32);
         var venus = new THREE.Mesh(venusGeometry,matvenus);
         venus.position.set(20,0,0);
+        venus.receiveShadow = true;
         scene.add(venus);
 
         // earthテクスチャー読み込み 
