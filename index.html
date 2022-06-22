@@ -64,64 +64,108 @@
         // 水星を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matmercury);
-        mercury.position.set(15,0,0);
+        mercury.position.set(10,0,0);
         scene.add(mercury);
 
+        // venusテクスチャー読み込み
+        var venustexture = textureLoader.load("img/venusmap.jpg");
+        var matvenus = new THREE.MeshLambertMaterial();
+        matvenus.map = venustexture;
 
-        /*// 金星を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
-        scene.add(mercury);
+        // 金星を作成
+        var venusGeometry = new THREE.SphereGeometry(1,32,32);
+        var venus = new THREE.Mesh(venusGeometry,matvenus);
+        venus.position.set(20,0,0);
+        scene.add(venus);
+
+        // earthテクスチャー読み込み 
+        var earthtexture = textureLoader.load("img/earth.png");
+        var matearth = new THREE.MeshLambertMaterial();
+        matearth.map = earthtexture;
 
         // 地球を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
-        scene.add(mercury);
+        var earthGeometry = new THREE.SphereGeometry(1,32,32);
+        var earth = new THREE.Mesh(earthGeometry,matearth);
+        earth.position.set(30,0,0);
+        scene.add(earth);
+
+        // moonテクスチャー読み込み
+        var moontexture = textureLoader.load("img/moonmap.jpg");
+        var matmoon = new THREE.MeshLambertMaterial();
+        matmoon.map = moontexture;
 
         // 月を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
-        scene.add(mercury);
+        var moonGeometry = new THREE.SphereGeometry(1,32,32);
+        var moon = new THREE.Mesh(moonGeometry,matmoon);
+        moon.position.set(25,0,0);
+        scene.add(moon);
         
+        // marsテクスチャー読み込み  
+        var marstexture = textureLoader.load("img/marsmap.jpg");
+        var matmars = new THREE.MeshLambertMaterial();
+        matmars.map = marstexture;
+
         // 火星を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
-        scene.add(mercury);
+        var marsGeometry = new THREE.SphereGeometry(1,32,32);
+        var mars = new THREE.Mesh(marsGeometry,matsun);
+        mars.position.set(40,0,0);
+        scene.add(mars);
+
+        // jupiterテクスチャー読み込み  
+        var jupitertexture = textureLoader.load("img/jupitermap.jpg");
+        var matjupiter = new THREE.MeshLambertMaterial();
+        matjupiter.map = jupitertexture;
 
         // 木星を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
-        scene.add(mercury);
+        var jupiterGeometry = new THREE.SphereGeometry(1,32,32);
+        var jupiter = new THREE.Mesh(jupiterGeometry,matjupiter);
+        jupiter.position.set(50,0,0);
+        scene.add(jupiter);
         
+        // saturnテクスチャー読み込み
+        var mercurytexture = textureLoader.load("img/saturnmap.jpg");
+        var matmercury = new THREE.MeshLambertMaterial();
+        matmercury.map = mercurytexture;
+
         // 土星を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
+        mercury.position.set(60,0,0);
         scene.add(mercury);
+
+        // uranusテクスチャー読み込み  
+        var mercurytexture = textureLoader.load("img/uranusmap.jpg");
+        var matmercury = new THREE.MeshLambertMaterial();
+        matmercury.map = mercurytexture;
 
         // 天王星を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
+        mercury.position.set(70,0,0);
         scene.add(mercury);
         
+        // neptuneテクスチャー読み込み
+        var mercurytexture = textureLoader.load("img/neptunemap.jpg");
+        var matmercury = new THREE.MeshLambertMaterial();
+        matmercury.map = mercurytexture;
+
         // 海王星を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
+        mercury.position.set(80,0,0);
         scene.add(mercury);
+
+        /*/ mercuryテクスチャー読み込み  
+        var mercurytexture = textureLoader.load("img/mercurymap.jpg");
+        var matmercury = new THREE.MeshLambertMaterial();
+        matmercury.map = mercurytexture;
 
         // 小惑星帯を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(5,0,0);
-        scene.add(mercury);
-        */
+        mercury.position.set(90,0,0);
+        scene.add(mercury);*/
+        
 
         update();
 
