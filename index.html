@@ -36,6 +36,10 @@
         
         // 点光源1
         var pointLight1 = new THREE.PointLight(0xffffff,1.5,100000,1);
+        // レンダラー：シャドウを有効にする
+        renderer.shadowMap.enabled = true;
+        // ライトに影を有効にする
+        pointLight1.castShadow = true;
         // シーンに追加
         scene.add(pointLight1);
 
