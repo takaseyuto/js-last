@@ -107,7 +107,7 @@
 
         // 火星を作成
         var marsGeometry = new THREE.SphereGeometry(1,32,32);
-        var mars = new THREE.Mesh(marsGeometry,matsun);
+        var mars = new THREE.Mesh(marsGeometry,matmars);
         mars.position.set(40,0,0);
         scene.add(mars);
 
@@ -123,37 +123,37 @@
         scene.add(jupiter);
         
         // saturnテクスチャー読み込み
-        var mercurytexture = textureLoader.load("img/saturnmap.jpg");
-        var matmercury = new THREE.MeshLambertMaterial();
-        matmercury.map = mercurytexture;
+        var saturntexture = textureLoader.load("img/saturnmap.jpg");
+        var matsaturn = new THREE.MeshLambertMaterial();
+        matsaturn.map = saturntexture;
 
         // 土星を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(60,0,0);
-        scene.add(mercury);
+        var saturnGeometry = new THREE.SphereGeometry(1,32,32);
+        var saturn = new THREE.Mesh(saturnGeometry,matsaturn);
+        saturn.position.set(60,0,0);
+        scene.add(saturn);
 
         // uranusテクスチャー読み込み  
-        var mercurytexture = textureLoader.load("img/uranusmap.jpg");
-        var matmercury = new THREE.MeshLambertMaterial();
-        matmercury.map = mercurytexture;
+        var uranustexture = textureLoader.load("img/uranusmap.jpg");
+        var maturanus = new THREE.MeshLambertMaterial();
+        maturanus.map = uranustexture;
 
         // 天王星を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(70,0,0);
-        scene.add(mercury);
+        var uranusGeometry = new THREE.SphereGeometry(1,32,32);
+        var uranus = new THREE.Mesh(uranusGeometry,maturanus);
+        uranus.position.set(70,0,0);
+        scene.add(uranus);
         
         // neptuneテクスチャー読み込み
-        var mercurytexture = textureLoader.load("img/neptunemap.jpg");
-        var matmercury = new THREE.MeshLambertMaterial();
-        matmercury.map = mercurytexture;
+        var neptunetexture = textureLoader.load("img/neptunemap.jpg");
+        var matneptune = new THREE.MeshLambertMaterial();
+        matneptune.map = neptunetexture;
 
         // 海王星を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(80,0,0);
-        scene.add(mercury);
+        var neptuneGeometry = new THREE.SphereGeometry(1,32,32);
+        var neptune = new THREE.Mesh(neptuneGeometry,matneptune);
+        neptune.position.set(80,0,0);
+        scene.add(neptune);
 
         /*/ mercuryテクスチャー読み込み  
         var mercurytexture = textureLoader.load("img/mercurymap.jpg");
