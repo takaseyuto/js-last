@@ -80,6 +80,7 @@
         var venusGeometry = new THREE.SphereGeometry(1,32,32);
         var venus = new THREE.Mesh(venusGeometry,matvenus);
         venus.position.set(20,0,0);
+        venus.castShadow = true;
         venus.receiveShadow = true;
         scene.add(venus);
 
@@ -92,6 +93,8 @@
         var earthGeometry = new THREE.SphereGeometry(1,32,32);
         var earth = new THREE.Mesh(earthGeometry,matearth);
         earth.position.set(30,0,0);
+        earth.castShadow = true;
+        earth.receiveShadow = true;
         scene.add(earth);
 
         // moonテクスチャー読み込み
@@ -103,6 +106,8 @@
         var moonGeometry = new THREE.SphereGeometry(1,32,32);
         var moon = new THREE.Mesh(moonGeometry,matmoon);
         moon.position.set(25,0,0);
+        moon.castShadow = true;
+        moon.receiveShadow = true;
         scene.add(moon);
         
         // marsテクスチャー読み込み  
@@ -114,6 +119,8 @@
         var marsGeometry = new THREE.SphereGeometry(1,32,32);
         var mars = new THREE.Mesh(marsGeometry,matmars);
         mars.position.set(40,0,0);
+        mars.castShadow = true;
+        mars.receiveShadow = true;
         scene.add(mars);
 
         // jupiterテクスチャー読み込み  
@@ -125,6 +132,8 @@
         var jupiterGeometry = new THREE.SphereGeometry(1,32,32);
         var jupiter = new THREE.Mesh(jupiterGeometry,matjupiter);
         jupiter.position.set(50,0,0);
+        jupiter.castShadow = true;
+        jupiter.receiveShadow = true;
         scene.add(jupiter);
         
         // saturnテクスチャー読み込み
@@ -136,6 +145,8 @@
         var saturnGeometry = new THREE.SphereGeometry(1,32,32);
         var saturn = new THREE.Mesh(saturnGeometry,matsaturn);
         saturn.position.set(60,0,0);
+        saturn.castShadow = true;
+        saturn.receiveShadow = true;
         scene.add(saturn);
 
         // uranusテクスチャー読み込み  
@@ -147,6 +158,8 @@
         var uranusGeometry = new THREE.SphereGeometry(1,32,32);
         var uranus = new THREE.Mesh(uranusGeometry,maturanus);
         uranus.position.set(70,0,0);
+        uranus.castShadow = true;
+        uranus.receiveShadow = true;
         scene.add(uranus);
         
         // neptuneテクスチャー読み込み
@@ -158,6 +171,8 @@
         var neptuneGeometry = new THREE.SphereGeometry(1,32,32);
         var neptune = new THREE.Mesh(neptuneGeometry,matneptune);
         neptune.position.set(80,0,0);
+        neptune.castShadow = true;
+        neptune.receiveShadow = true;
         scene.add(neptune);
 
         /*/ mercuryテクスチャー読み込み  
