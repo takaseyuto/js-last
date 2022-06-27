@@ -68,7 +68,7 @@
         matmercury.map = mercurytexture;
 
         // 水星を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
+        var mercuryGeometry = new THREE.SphereGeometry(0.038,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matmercury);
         mercury.position.set(19,0,0);
         mercury.castShadow = true;
@@ -80,7 +80,7 @@
         matvenus.map = venustexture;
 
         // 金星を作成
-        var venusGeometry = new THREE.SphereGeometry(1,32,32);
+        var venusGeometry = new THREE.SphereGeometry(0.095,32,32);
         var venus = new THREE.Mesh(venusGeometry,matvenus);
         venus.position.set(36,0,0);
         venus.castShadow = true;
@@ -119,7 +119,7 @@
         matmars.map = marstexture;
 
         // 火星を作成
-        var marsGeometry = new THREE.SphereGeometry(1,32,32);
+        var marsGeometry = new THREE.SphereGeometry(0.054,32,32);
         var mars = new THREE.Mesh(marsGeometry,matmars);
         mars.position.set(75,0,0);
         mars.castShadow = true;
@@ -132,7 +132,7 @@
         matjupiter.map = jupitertexture;
 
         // 木星を作成
-        var jupiterGeometry = new THREE.SphereGeometry(1,32,32);
+        var jupiterGeometry = new THREE.SphereGeometry(1.12,32,32);
         var jupiter = new THREE.Mesh(jupiterGeometry,matjupiter);
         jupiter.position.set(250,0,0);
         jupiter.castShadow = true;
@@ -145,7 +145,7 @@
         matsaturn.map = saturntexture;
 
         // 土星を作成
-        var saturnGeometry = new THREE.SphereGeometry(1,32,32);
+        var saturnGeometry = new THREE.SphereGeometry(0.943,32,32);
         var saturn = new THREE.Mesh(saturnGeometry,matsaturn);
         saturn.position.set(475,0,0);
         saturn.castShadow = true;
@@ -158,7 +158,7 @@
         maturanus.map = uranustexture;
 
         // 天王星を作成
-        var uranusGeometry = new THREE.SphereGeometry(1,32,32);
+        var uranusGeometry = new THREE.SphereGeometry(0.4,32,32);
         var uranus = new THREE.Mesh(uranusGeometry,maturanus);
         uranus.position.set(950,0,0);
         uranus.castShadow = true;
@@ -171,7 +171,7 @@
         matneptune.map = neptunetexture;
 
         // 海王星を作成
-        var neptuneGeometry = new THREE.SphereGeometry(1,32,32);
+        var neptuneGeometry = new THREE.SphereGeometry(0.39,32,32);
         var neptune = new THREE.Mesh(neptuneGeometry,matneptune);
         neptune.position.set(1500,0,0);
         neptune.castShadow = true;
