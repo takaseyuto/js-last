@@ -7,7 +7,7 @@
 <body>
  <h1>太陽系を作成した</h1>
  
-
+実際の縮尺で太陽を作るとあまりにも見づらいので、1/10サイズにしてあります。
 
  <br>
  <script>
@@ -57,7 +57,7 @@
         matsun.map = suntexture;
 
         // 太陽を作成
-        var sunGeometry = new THREE.SphereGeometry(109,32,32);
+        var sunGeometry = new THREE.SphereGeometry(10.9,32,32);
         var sun = new THREE.Mesh(sunGeometry,matsun);
         sun.position.set(0,0,0);
         scene.add(sun);
