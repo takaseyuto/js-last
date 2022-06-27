@@ -7,7 +7,7 @@
 <body>
  <h1>太陽系を作成した</h1>
  
-実際の縮尺で太陽を作るとあまりにも見づらいので、1/10サイズにしてあります。
+実際の縮尺で太陽を作るとあまりにも見づらいので、1/8サイズにしてあります。
 
  <br>
  <script>
@@ -57,7 +57,7 @@
         matsun.map = suntexture;
 
         // 太陽を作成
-        var sunGeometry = new THREE.SphereGeometry(10.9,32,32);
+        var sunGeometry = new THREE.SphereGeometry(15,50,50);
         var sun = new THREE.Mesh(sunGeometry,matsun);
         sun.position.set(0,0,0);
         scene.add(sun);
@@ -68,7 +68,7 @@
         matmercury.map = mercurytexture;
 
         // 水星を作成
-        var mercuryGeometry = new THREE.SphereGeometry(0.38,32,32);
+        var mercuryGeometry = new THREE.SphereGeometry(0.38,50,50);
         var mercury = new THREE.Mesh(mercuryGeometry,matmercury);
         mercury.position.set(19.5,0,0);
         mercury.castShadow = true;
@@ -80,7 +80,7 @@
         matvenus.map = venustexture;
 
         // 金星を作成
-        var venusGeometry = new THREE.SphereGeometry(0.95,32,32);
+        var venusGeometry = new THREE.SphereGeometry(0.95,50,50);
         var venus = new THREE.Mesh(venusGeometry,matvenus);
         venus.position.set(36,0,0);
         venus.castShadow = true;
@@ -93,7 +93,7 @@
         matearth.map = earthtexture;
 
         // 地球を作成
-        var earthGeometry = new THREE.SphereGeometry(1,32,32);
+        var earthGeometry = new THREE.SphereGeometry(1,50,50);
         var earth = new THREE.Mesh(earthGeometry,matearth);
         earth.position.set(50,0,0);
         earth.castShadow = true;
@@ -106,9 +106,9 @@
         matmoon.map = moontexture;
 
         // 月を作成
-        var moonGeometry = new THREE.SphereGeometry(1,32,32);
+        var moonGeometry = new THREE.SphereGeometry(1,50,50);
         var moon = new THREE.Mesh(moonGeometry,matmoon);
-        moon.position.set(90,0,0);
+        moon.position.set(45,0,0);
         moon.castShadow = true;
         moon.receiveShadow = true;
         scene.add(moon);
@@ -119,9 +119,9 @@
         matmars.map = marstexture;
 
         // 火星を作成
-        var marsGeometry = new THREE.SphereGeometry(0.54,32,32);
+        var marsGeometry = new THREE.SphereGeometry(0.54,50,50);
         var mars = new THREE.Mesh(marsGeometry,matmars);
-        mars.position.set(150,0,0);
+        mars.position.set(75,0,0);
         mars.castShadow = true;
         mars.receiveShadow = true;
         scene.add(mars);
@@ -132,9 +132,9 @@
         matjupiter.map = jupitertexture;
 
         // 木星を作成
-        var jupiterGeometry = new THREE.SphereGeometry(11.2,32,32);
+        var jupiterGeometry = new THREE.SphereGeometry(11.2,50,50);
         var jupiter = new THREE.Mesh(jupiterGeometry,matjupiter);
-        jupiter.position.set(500,0,0);
+        jupiter.position.set(250,0,0);
         jupiter.castShadow = true;
         jupiter.receiveShadow = true;
         scene.add(jupiter);
@@ -145,9 +145,9 @@
         matsaturn.map = saturntexture;
 
         // 土星を作成
-        var saturnGeometry = new THREE.SphereGeometry(9.43,32,32);
+        var saturnGeometry = new THREE.SphereGeometry(9.43,50,50);
         var saturn = new THREE.Mesh(saturnGeometry,matsaturn);
-        saturn.position.set(960,0,0);
+        saturn.position.set(480,0,0);
         saturn.castShadow = true;
         saturn.receiveShadow = true;
         scene.add(saturn);
@@ -158,9 +158,9 @@
         maturanus.map = uranustexture;
 
         // 天王星を作成
-        var uranusGeometry = new THREE.SphereGeometry(4,32,32);
+        var uranusGeometry = new THREE.SphereGeometry(4,50,50);
         var uranus = new THREE.Mesh(uranusGeometry,maturanus);
-        uranus.position.set(1900,0,0);
+        uranus.position.set(950,0,0);
         uranus.castShadow = true;
         uranus.receiveShadow = true;
         scene.add(uranus);
@@ -171,9 +171,9 @@
         matneptune.map = neptunetexture;
 
         // 海王星を作成
-        var neptuneGeometry = new THREE.SphereGeometry(3.9,32,32);
+        var neptuneGeometry = new THREE.SphereGeometry(3.9,50,50);
         var neptune = new THREE.Mesh(neptuneGeometry,matneptune);
-        neptune.position.set(3000,0,0);
+        neptune.position.set(1500,0,0);
         neptune.castShadow = true;
         neptune.receiveShadow = true;
         scene.add(neptune);
