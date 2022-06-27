@@ -57,7 +57,7 @@
         matsun.map = suntexture;
 
         // 太陽を作成
-        var sunGeometry = new THREE.SphereGeometry(109,32,32);
+        var sunGeometry = new THREE.SphereGeometry(10.9,32,32);
         var sun = new THREE.Mesh(sunGeometry,matsun);
         sun.position.set(0,0,0);
         scene.add(sun);
@@ -93,7 +93,7 @@
         matearth.map = earthtexture;
 
         // 地球を作成
-        var earthGeometry = new THREE.SphereGeometry(1,32,32);
+        var earthGeometry = new THREE.SphereGeometry(0.1,32,32);
         var earth = new THREE.Mesh(earthGeometry,matearth);
         earth.position.set(50,0,0);
         earth.castShadow = true;
