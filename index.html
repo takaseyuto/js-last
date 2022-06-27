@@ -5,15 +5,18 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
- <h1>太陽系</h1>
+ <h1>太陽系を作成した</h1>
  
+
+
+ <br>
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
 
       function init() {
         // サイズを指定
-        const width = 1000
+        const width = 4000
         const height = 600;
 
         // レンダラーを作成
@@ -67,7 +70,7 @@
         // 水星を作成
         var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matmercury);
-        mercury.position.set(10,0,0);
+        mercury.position.set(19,0,0);
         mercury.castShadow = true;
         scene.add(mercury);
 
@@ -79,7 +82,7 @@
         // 金星を作成
         var venusGeometry = new THREE.SphereGeometry(1,32,32);
         var venus = new THREE.Mesh(venusGeometry,matvenus);
-        venus.position.set(20,0,0);
+        venus.position.set(36,0,0);
         venus.castShadow = true;
         venus.receiveShadow = true;
         scene.add(venus);
@@ -92,7 +95,7 @@
         // 地球を作成
         var earthGeometry = new THREE.SphereGeometry(1,32,32);
         var earth = new THREE.Mesh(earthGeometry,matearth);
-        earth.position.set(30,0,0);
+        earth.position.set(50,0,0);
         earth.castShadow = true;
         earth.receiveShadow = true;
         scene.add(earth);
@@ -105,7 +108,7 @@
         // 月を作成
         var moonGeometry = new THREE.SphereGeometry(1,32,32);
         var moon = new THREE.Mesh(moonGeometry,matmoon);
-        moon.position.set(25,0,0);
+        moon.position.set(47,0,0);
         moon.castShadow = true;
         moon.receiveShadow = true;
         scene.add(moon);
@@ -118,7 +121,7 @@
         // 火星を作成
         var marsGeometry = new THREE.SphereGeometry(1,32,32);
         var mars = new THREE.Mesh(marsGeometry,matmars);
-        mars.position.set(40,0,0);
+        mars.position.set(75,0,0);
         mars.castShadow = true;
         mars.receiveShadow = true;
         scene.add(mars);
@@ -131,7 +134,7 @@
         // 木星を作成
         var jupiterGeometry = new THREE.SphereGeometry(1,32,32);
         var jupiter = new THREE.Mesh(jupiterGeometry,matjupiter);
-        jupiter.position.set(50,0,0);
+        jupiter.position.set(250,0,0);
         jupiter.castShadow = true;
         jupiter.receiveShadow = true;
         scene.add(jupiter);
@@ -144,7 +147,7 @@
         // 土星を作成
         var saturnGeometry = new THREE.SphereGeometry(1,32,32);
         var saturn = new THREE.Mesh(saturnGeometry,matsaturn);
-        saturn.position.set(60,0,0);
+        saturn.position.set(475,0,0);
         saturn.castShadow = true;
         saturn.receiveShadow = true;
         scene.add(saturn);
@@ -157,7 +160,7 @@
         // 天王星を作成
         var uranusGeometry = new THREE.SphereGeometry(1,32,32);
         var uranus = new THREE.Mesh(uranusGeometry,maturanus);
-        uranus.position.set(70,0,0);
+        uranus.position.set(950,0,0);
         uranus.castShadow = true;
         uranus.receiveShadow = true;
         scene.add(uranus);
@@ -170,7 +173,7 @@
         // 海王星を作成
         var neptuneGeometry = new THREE.SphereGeometry(1,32,32);
         var neptune = new THREE.Mesh(neptuneGeometry,matneptune);
-        neptune.position.set(80,0,0);
+        neptune.position.set(1500,0,0);
         neptune.castShadow = true;
         neptune.receiveShadow = true;
         scene.add(neptune);
