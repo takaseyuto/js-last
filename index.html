@@ -32,7 +32,7 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(0, 0, 400);
+        camera.position.set(0, 0, 300);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera, document.body); 
@@ -70,7 +70,7 @@
         // 水星を作成
         var mercuryGeometry = new THREE.SphereGeometry(0.38,32,32);
         var mercury = new THREE.Mesh(mercuryGeometry,matmercury);
-        mercury.position.set(39,0,0);
+        mercury.position.set(19.5,0,0);
         mercury.castShadow = true;
         scene.add(mercury);
 
@@ -82,7 +82,7 @@
         // 金星を作成
         var venusGeometry = new THREE.SphereGeometry(0.95,32,32);
         var venus = new THREE.Mesh(venusGeometry,matvenus);
-        venus.position.set(72,0,0);
+        venus.position.set(36,0,0);
         venus.castShadow = true;
         venus.receiveShadow = true;
         scene.add(venus);
@@ -95,7 +95,7 @@
         // 地球を作成
         var earthGeometry = new THREE.SphereGeometry(1,32,32);
         var earth = new THREE.Mesh(earthGeometry,matearth);
-        earth.position.set(100,0,0);
+        earth.position.set(50,0,0);
         earth.castShadow = true;
         earth.receiveShadow = true;
         scene.add(earth);
