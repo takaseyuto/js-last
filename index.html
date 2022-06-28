@@ -236,15 +236,34 @@
 
 
 
-        // Asteroidxテクスチャー読み込み  
-        var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("img/asteroid1.png");
-        const material = new THREE.SpriteMaterial({ map: texture,});
+        // Asteroid1テクスチャー読み込み  
+        var textureLoaderast1 = new THREE.TextureLoader();  
+        var textureast1 = textureLoaderast1.load("img/asteroid1.png");
+        const materialast1 = new THREE.SpriteMaterial({ map: textureast1,});
 
         // 小惑星帯xを作成
 
-        for (let i = 0; i < 800; i++) {
-          const sprite = new THREE.Sprite(material);
+        for (let i = 0; i < 500; i++) {
+          const sprite = new THREE.Sprite(materialast1);
+          // ランダムな座標に配置
+          let x=Math.random();
+          //let r = (x*x) * (z*z);
+          sprite.position.x = (120*Math.cos(Math.PI*2*x))+30*Math.random()-15;
+          sprite.position.y = (Math.random()*7 );
+          sprite.position.z = (120*Math.sin(Math.PI*2*x))+30*Math.random()-15;
+          // スケールを調整
+          sprite.scale.set(0.7, 0.7, 0.7);
+          
+          scene.add(sprite);
+        }
+        
+        // Asteroid1テクスチャー読み込み  
+        var textureLoaderast2 = new THREE.TextureLoader();  
+        var textureast2 = textureLoaderast2.load("img/asteroid2.png");
+        const materialast2 = new THREE.SpriteMaterial({ map: textureast2,});
+
+        for (let i = 0; i < 500; i++) {
+          const sprite = new THREE.Sprite(materialast2);
           // ランダムな座標に配置
           let x=Math.random();
           //let r = (x*x) * (z*z);
@@ -257,7 +276,6 @@
           scene.add(sprite);
 
         }
-        
         
 
 
