@@ -32,7 +32,7 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(50, 0, 250);
+        camera.position.set(100, 100, 200);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera, document.body); 
@@ -74,6 +74,13 @@
         mercury.castShadow = true;
         scene.add(mercury);
 
+        //mer軌道線
+        const mergeometry = new THREE.TorusGeometry( 19.5, 0.1, 16, 100 );
+        const mermaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        const mertorus = new THREE.Mesh( mergeometry, mermaterial );
+        mertorus.rotation.set(Math.PI/2,0,0);
+        scene.add( mertorus );
+
         // venusテクスチャー読み込み
         var venustexture = textureLoader.load("img/venusmap.jpg");
         var matvenus = new THREE.MeshLambertMaterial();
@@ -87,6 +94,13 @@
         venus.receiveShadow = true;
         scene.add(venus);
 
+        //ven軌道線
+        const vengeometry = new THREE.TorusGeometry( 36, 0.1, 16, 100 );
+        const venmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        const ventorus = new THREE.Mesh( vengeometry, venmaterial );
+        ventorus.rotation.set(Math.PI/2,0,0);
+        scene.add( ventorus );
+
         // earthテクスチャー読み込み 
         var earthtexture = textureLoader.load("img/earth.png");
         var matearth = new THREE.MeshLambertMaterial();
@@ -99,6 +113,13 @@
         earth.castShadow = true;
         earth.receiveShadow = true;
         scene.add(earth);
+
+        //軌道線
+        const eargeometry = new THREE.TorusGeometry( 50, 0.2, 16, 100 );
+        const earmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        const eartorus = new THREE.Mesh( eargeometry, earmaterial );
+        eartorus.rotation.set(Math.PI/2,0,0);
+        scene.add( eartorus );
 
         // moonテクスチャー読み込み
         var moontexture = textureLoader.load("img/moonmap.jpg");
@@ -126,6 +147,13 @@
         mars.receiveShadow = true;
         scene.add(mars);
 
+        //mar軌道線
+        const margeometry = new THREE.TorusGeometry( 75, 0.1, 16, 100 );
+        const marmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        const martorus = new THREE.Mesh( margeometry, marmaterial );
+        martorus.rotation.set(Math.PI/2,0,0);
+        scene.add( martorus );
+
         // jupiterテクスチャー読み込み  
         var jupitertexture = textureLoader.load("img/jupitermap.jpg");
         var matjupiter = new THREE.MeshLambertMaterial();
@@ -138,6 +166,13 @@
         jupiter.castShadow = true;
         jupiter.receiveShadow = true;
         scene.add(jupiter);
+
+        //jup軌道線
+        const jupgeometry = new THREE.TorusGeometry( 250, 0.5, 16, 100 );
+        const jupmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        const juptorus = new THREE.Mesh( jupgeometry, jupmaterial );
+        juptorus.rotation.set(Math.PI/2,0,0);
+        scene.add( juptorus );
         
         // saturnテクスチャー読み込み
         var saturntexture = textureLoader.load("img/saturnmap.jpg");
@@ -152,6 +187,13 @@
         saturn.receiveShadow = true;
         scene.add(saturn);
 
+        //sat軌道線
+        const satgeometry = new THREE.TorusGeometry( 480, 0.6, 16, 100 );
+        const satmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        const sattorus = new THREE.Mesh( satgeometry, satmaterial );
+        sattorus.rotation.set(Math.PI/2,0,0);
+        scene.add( sattorus );
+
         // uranusテクスチャー読み込み  
         var uranustexture = textureLoader.load("img/uranusmap.jpg");
         var maturanus = new THREE.MeshLambertMaterial();
@@ -164,6 +206,13 @@
         uranus.castShadow = true;
         uranus.receiveShadow = true;
         scene.add(uranus);
+
+        //ura軌道線
+        const urageometry = new THREE.TorusGeometry( 950, 0.7, 16, 100 );
+        const uramaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        const uratorus = new THREE.Mesh( urageometry, uramaterial );
+        uratorus.rotation.set(Math.PI/2,0,0);
+        scene.add( uratorus );
         
         // neptuneテクスチャー読み込み
         var neptunetexture = textureLoader.load("img/neptunemap.jpg");
@@ -178,8 +227,8 @@
         neptune.receiveShadow = true;
         scene.add(neptune);
         
-        //軌道線
-        const geometry = new THREE.TorusGeometry( 19.5, 0.1, 16, 100 );
+        //nep軌道線
+        const geometry = new THREE.TorusGeometry( 1500, 0.8, 16, 100 );
         const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
         const torus = new THREE.Mesh( geometry, material );
         torus.rotation.set(Math.PI/2,0,0);
