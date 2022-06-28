@@ -243,14 +243,14 @@
 
         // 小惑星帯xを作成
 
-        for (let i = 0; i < 500; i++) {
+        for (let i = 0; i < 800; i++) {
           const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
           let x=Math.random();
           //let r = (x*x) * (z*z);
-          sprite.position.x = (120*Math.cos(Math.PI*2*x))+20*Math.random();
+          sprite.position.x = (110*Math.cos(Math.PI*2*x))+30*Math.random();
           sprite.position.y = (Math.random()*7 );
-          sprite.position.z = (120*Math.sin(Math.PI*2*x))+20*Math.random();
+          sprite.position.z = (110*Math.sin(Math.PI*2*x))+30*Math.random();
           // スケールを調整
           sprite.scale.set(0.5, 0.5, 0.5);
           
