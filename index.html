@@ -247,7 +247,6 @@
           const sprite = new THREE.Sprite(materialast1);
           // ランダムな座標に配置
           let x=Math.random();
-          //let r = (x*x) * (z*z);
           sprite.position.x = (120*Math.cos(Math.PI*2*x))+30*Math.random()-15;
           sprite.position.y = (Math.random()*7 );
           sprite.position.z = (120*Math.sin(Math.PI*2*x))+30*Math.random()-15;
@@ -257,7 +256,7 @@
           scene.add(sprite);
         }
         
-        // Asteroid1テクスチャー読み込み  
+        // Asteroid2テクスチャー読み込み  
         var textureLoaderast2 = new THREE.TextureLoader();  
         var textureast2 = textureLoaderast2.load("img/asteroid2.png");
         const materialast2 = new THREE.SpriteMaterial({ map: textureast2,});
@@ -266,7 +265,6 @@
           const sprite = new THREE.Sprite(materialast2);
           // ランダムな座標に配置
           let x=Math.random();
-          //let r = (x*x) * (z*z);
           sprite.position.x = (120*Math.cos(Math.PI*2*x))+30*Math.random()-15;
           sprite.position.y = (Math.random()*7 );
           sprite.position.z = (120*Math.sin(Math.PI*2*x))+30*Math.random()-15;
