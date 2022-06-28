@@ -254,7 +254,7 @@
           sprite.position.z = 1 * (Math.random()%10 );
           // スケールを調整
           sprite.scale.set(0.5, 0.5, 0.5);
-
+          scene.add(sprite);
           if((x**2)*(y**2) >= 640 && (x**2)*(y**2) <= 18000){
             scene.add(sprite);
           }
