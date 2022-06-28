@@ -238,7 +238,7 @@
 
         // Asteroidxテクスチャー読み込み  
         var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("img/1604Q4.jpg");
+        var texture = textureLoader.load("img/1604Q4.png");
         const material = new THREE.SpriteMaterial({ map: texture,});
 
         // 小惑星帯xを作成
@@ -255,7 +255,7 @@
           sprite.scale.set(0.5, 0.5, 0.5);
           
           scene.add(sprite);
-          
+
         }
         
         
