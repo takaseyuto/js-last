@@ -248,7 +248,7 @@
           // ランダムな座標に配置
           let x=(Math.random()*200);
           let z=(Math.random()*200);
-          let r = 0;
+          let r = Math.sqrt((x**2) *(z**2));
           sprite.position.x = x;
           sprite.position.y = (Math.random()*5 );
           sprite.position.z = z;
