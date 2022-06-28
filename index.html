@@ -237,24 +237,24 @@
 
 
         // Asteroidxテクスチャー読み込み  
-        const astxmaterial = new THREE.TextureLoader();
-        const asteroidx = THREE.TextureLoader.load("img/ph_thumb.jpg");
-        const material = new THREE.SpriteMaterial({ map: asteroidx,});
+        var textureLoader = new THREE.TextureLoader();  
+        var texture = textureLoader.load("img/.png");
+        const material = new THREE.SpriteMaterial({ map: texture,});
 
         // 小惑星帯xを作成
 
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < 100; i++) {
           const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
-          sprite.position.x = 1 * (Math.random()%135);
-          sprite.position.y = 1 * (Math.random()%135);
+          sprite.position.x = 2 * (Math.random()%75);
+          sprite.position.y = 2 * (Math.random()%75);
           sprite.position.z = 1 * (Math.random()%10 );
           // スケールを調整
           sprite.scale.set(0.5, 0.5, 0.5);
 
-          if(Math.sqrt(position.x)**2 * (sprite.position.y)**2 >= 80 && Math.sqrt(position.x)**2 * (sprite.position.y)**2 <= 135){
+          //if(Math.sqrt(position.x)**2 * (sprite.position.y)**2 >= 80 && Math.sqrt(position.x)**2 * (sprite.position.y)**2 <= 135){
             scene.add(sprite);
-          }
+          //}
           
         }
         
