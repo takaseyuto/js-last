@@ -246,17 +246,15 @@
         for (let i = 0; i < 1000; i++) {
           const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
-          let x=(Math.random()*300)-150;
-          let z=(Math.random()*300)-150;
+          let x=Math.random();
           let r = (x*x) * (z*z);
-          sprite.position.x = x;
+          sprite.position.x = (120*Math.cos(Math.PI*2*x))+(10*x);
           sprite.position.y = (Math.random()*7 );
-          sprite.position.z = z;
+          sprite.position.z = (120*Math.cos(Math.PI*2*x))+(10*x);
           // スケールを調整
-          sprite.scale.set(1, 1, 1);
-          //if(r<=25600){
-            scene.add(sprite);
-          //}
+          sprite.scale.set(0.5, 0.5, 0.5);
+          
+          scene.add(sprite);
           
         }
         
