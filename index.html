@@ -162,13 +162,13 @@
         // 木星を作成
         var jupiterGeometry = new THREE.SphereGeometry(11.2,50,50);
         var jupiter = new THREE.Mesh(jupiterGeometry,matjupiter);
-        jupiter.position.set(250,0,0);
+        jupiter.position.set(167,0,0);
         jupiter.castShadow = true;
         jupiter.receiveShadow = true;
         scene.add(jupiter);
 
         //jup軌道線
-        const jupgeometry = new THREE.TorusGeometry( 250, 0.5, 16, 100 );
+        const jupgeometry = new THREE.TorusGeometry( 167, 0.5, 16, 100 );
         const jupmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
         const juptorus = new THREE.Mesh( jupgeometry, jupmaterial );
         juptorus.rotation.set(Math.PI/2,0,0);
@@ -182,13 +182,13 @@
         // 土星を作成
         var saturnGeometry = new THREE.SphereGeometry(9.43,50,50);
         var saturn = new THREE.Mesh(saturnGeometry,matsaturn);
-        saturn.position.set(480,0,0);
+        saturn.position.set(320,0,0);
         saturn.castShadow = true;
         saturn.receiveShadow = true;
         scene.add(saturn);
 
         //sat軌道線
-        const satgeometry = new THREE.TorusGeometry( 480, 0.6, 16, 100 );
+        const satgeometry = new THREE.TorusGeometry( 320, 0.6, 16, 100 );
         const satmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
         const sattorus = new THREE.Mesh( satgeometry, satmaterial );
         sattorus.rotation.set(Math.PI/2,0,0);
@@ -202,13 +202,13 @@
         // 天王星を作成
         var uranusGeometry = new THREE.SphereGeometry(4,50,50);
         var uranus = new THREE.Mesh(uranusGeometry,maturanus);
-        uranus.position.set(950,0,0);
+        uranus.position.set(630,0,0);
         uranus.castShadow = true;
         uranus.receiveShadow = true;
         scene.add(uranus);
 
         //ura軌道線
-        const urageometry = new THREE.TorusGeometry( 950, 0.7, 16, 100 );
+        const urageometry = new THREE.TorusGeometry( 630, 0.7, 16, 100 );
         const uramaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
         const uratorus = new THREE.Mesh( urageometry, uramaterial );
         uratorus.rotation.set(Math.PI/2,0,0);
@@ -222,30 +222,45 @@
         // 海王星を作成
         var neptuneGeometry = new THREE.SphereGeometry(3.9,50,50);
         var neptune = new THREE.Mesh(neptuneGeometry,matneptune);
-        neptune.position.set(1500,0,0);
+        neptune.position.set(1000,0,0);
         neptune.castShadow = true;
         neptune.receiveShadow = true;
         scene.add(neptune);
         
         //nep軌道線
-        const geometry = new THREE.TorusGeometry( 1500, 0.8, 16, 100 );
-        const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-        const torus = new THREE.Mesh( geometry, material );
-        torus.rotation.set(Math.PI/2,0,0);
-        scene.add( torus );
+        const nepgeometry = new THREE.TorusGeometry( 1000, 0.8, 16, 100 );
+        const nepmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        const neptorus = new THREE.Mesh( nepgeometry, nepmaterial );
+        neptorus.rotation.set(Math.PI/2,0,0);
+        scene.add( neptorus );
 
 
 
-        /*/ mercuryテクスチャー読み込み  
-        var mercurytexture = textureLoader.load("img/mercurymap.jpg");
-        var matmercury = new THREE.MeshLambertMaterial();
-        matmercury.map = mercurytexture;
+        // Asteroidxテクスチャー読み込み  
+        const astxmaterial = new THREE.TextureLoader();
+        const asteroidx = THREE.TextureLoader.load("img/ph_thumb.jpg");
+        const material = new THREE.SpriteMaterial({ map: asteroidx,});
 
-        // 小惑星帯を作成
-        var mercuryGeometry = new THREE.SphereGeometry(1,32,32);
-        var mercury = new THREE.Mesh(mercuryGeometry,matsun);
-        mercury.position.set(90,0,0);
-        scene.add(mercury);*/
+        // 小惑星帯xを作成
+
+        for (let i = 0; i < 200; i++) {
+          const sprite = new THREE.Sprite(material);
+          // ランダムな座標に配置
+          sprite.position.x = 1 * (Math.random() );
+          sprite.position.y = 1 * Math.random();
+          sprite.position.z = 1 * (Math.random()%10 );
+          // スケールを調整
+          sprite.scale.set(0.5, 0.5, 0.5);
+
+          if(Math.sqrt(position.x)**2 * (sprite.position.y)**2 >= 80 && Math.sqrt(position.x)**2 * (sprite.position.y)**2 <= 135){
+            scene.add(sprite);
+          }
+          
+        }
+        
+        
+
+
         
 
         update();
