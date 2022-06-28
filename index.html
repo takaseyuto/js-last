@@ -248,13 +248,13 @@
           // ランダムな座標に配置
           let x=(Math.random()*160);
           let z=(Math.random()*160);
-          let r = Math.sqrt((x**2) *(z**2));
+          let r = Math.sqrt((x*x) * (z*z));
           sprite.position.x = x;
           sprite.position.y = (Math.random()*7 );
           sprite.position.z = z;
           // スケールを調整
           sprite.scale.set(1, 1, 1);
-          if(r<=150){
+          if(r<=160){
             scene.add(sprite);
           }
           
