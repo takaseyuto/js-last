@@ -246,8 +246,8 @@
         for (let i = 0; i < 100; i++) {
           const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
-          let x=(Math.random()%70)+80;
-          let z=(Math.random()%70)+80;
+          let x=((Math.random()%70)+80);
+          let z=((Math.random()%70)+80);
 
           sprite.position.x = x;
           sprite.position.y = (Math.random()%10 );
@@ -255,9 +255,7 @@
           // スケールを調整
           sprite.scale.set(1, 1, 1);
           scene.add(sprite);
-          //if((x**2)*(y**2) >= 640 && (x**2)*(y**2) <= 18000){
-          //  scene.add(sprite);
-          //}
+          
           
         }
         
