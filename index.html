@@ -246,9 +246,9 @@
         for (let i = 0; i < 100; i++) {
           const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
-          let x=((Math.random()%70)+80);
-          let z=((Math.random()%70)+80);
-
+          let x=(Math.random()%200);
+          let z=(Math.random()%200);
+          let r = 0;
           sprite.position.x = x;
           sprite.position.y = (Math.random()%10 );
           sprite.position.z = z;
