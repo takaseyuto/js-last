@@ -185,7 +185,7 @@
         saturn.position.set(320,0,0);
         saturn.castShadow = true;
         saturn.receiveShadow = true;
-        scene.add(saturn);
+        //scene.add(saturn);
 
         //環を作成
         var satringtexture = textureLoader.load("img/saturnmap.jpg");
@@ -196,11 +196,12 @@
         var satring = new THREE.Mesh(satringGeometry,matsatring);
         satring.position.set(320,0,0);
         satring.rotation.set(Math.PI/2,0,0);
-        scene.add(satring);
+        //scene.add(satring);
 
         var sat =new THREE.Group();
         sat.add(saturn);
-
+        sat.add(satring);
+        scene.add(sat);
 
 
         //sat軌道線
