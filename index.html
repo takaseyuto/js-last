@@ -187,6 +187,16 @@
         saturn.receiveShadow = true;
         scene.add(saturn);
 
+        //環を作成
+        var satringtexture = textureLoader.load("img/saturnmap.jpg");
+        var matsatring = new THREE.MeshLambertMaterial();
+        matsatring.map = satringtexture;
+
+        var satringGeometry = new THREE.TorusGeometry(12,3,2,100);
+        var satring = new THREE.Mesh(satringGeometry,matsatring);
+        satring.position.set(320,0,0);
+        scene.add(satring);
+
         //sat軌道線
         const satgeometry = new THREE.TorusGeometry( 320, 0.6, 16, 100 );
         const satmaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
