@@ -72,14 +72,12 @@
         var mercury = new THREE.Mesh(mercuryGeometry,matmercury);
         mercury.position.set(19.5,0,0);
         mercury.castShadow = true;
-        scene.add(mercury);
 
         //mer軌道線
         const mergeometry = new THREE.TorusGeometry( 19.5, 0.1, 16, 100 );
         const mermaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
         const mertorus = new THREE.Mesh( mergeometry, mermaterial );
         mertorus.rotation.set(Math.PI/2,0,0);
-        scene.add( mertorus );
 
         var merg =new THREE.Group();
         merg.add(mercury);
@@ -97,14 +95,12 @@
         venus.position.set(36,0,0);
         venus.castShadow = true;
         venus.receiveShadow = true;
-        scene.add(venus);
 
         //ven軌道線
         const vengeometry = new THREE.TorusGeometry( 36, 0.1, 16, 100 );
         const venmaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
         const ventorus = new THREE.Mesh( vengeometry, venmaterial );
         ventorus.rotation.set(Math.PI/2,0,0);
-        scene.add( ventorus );
 
         var veng =new THREE.Group();
         veng.add(venus);
@@ -131,6 +127,7 @@
         eartorus.rotation.set(Math.PI/2,0,0);
         scene.add( eartorus );
 
+
         // moonテクスチャー読み込み
         var moontexture = textureLoader.load("img/moonmap.jpg");
         var matmoon = new THREE.MeshLambertMaterial();
@@ -139,10 +136,26 @@
         // 月を作成
         var moonGeometry = new THREE.SphereGeometry(1,50,50);
         var moon = new THREE.Mesh(moonGeometry,matmoon);
-        moon.position.set(45,0,0);
+        moon.position.set(47,0,0);
         moon.castShadow = true;
         moon.receiveShadow = true;
-        scene.add(moon);
+        scene.add( moon );
+
+        //月軌道
+        const moogeometry = new THREE.TorusGeometry( 3, 0.1, 16, 100 );
+        const moomaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+        const mootorus = new THREE.Mesh( moogeometry, moomaterial );
+        mootorus.position.set(50,0,0);
+        mootorus.rotation.set(Math.PI/2,0,0);
+        scene.add( mootorus );
+
+        //M and E
+        var earg =new THREE.Group();
+        earg.add(earth);
+        earg.add(eartorus);
+        earg.add(mootorus);
+        scene.add(earg);
+
         
         // marsテクスチャー読み込み  
         var marstexture = textureLoader.load("img/marsmap.jpg");
@@ -205,7 +218,7 @@
         saturn.position.set(320,0,0);
         saturn.castShadow = true;
         saturn.receiveShadow = true;
-        //scene.add(saturn);
+        
 
         //環を作成
         var satringtexture = textureLoader.load("img/satring.jpg");
@@ -247,14 +260,19 @@
         uranus.position.set(630,0,0);
         uranus.castShadow = true;
         uranus.receiveShadow = true;
-        scene.add(uranus);
+        //scene.add(uranus);
 
         //ura軌道線
         const urageometry = new THREE.TorusGeometry( 630, 0.7, 16, 100 );
         const uramaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
         const uratorus = new THREE.Mesh( urageometry, uramaterial );
         uratorus.rotation.set(Math.PI/2,0,0);
-        scene.add( uratorus );
+        //scene.add( uratorus );
+
+        var urag =new THREE.Group();
+        urag.add(uranus);
+        urag.add(uratorus);
+        scene.add(urag);
         
         // neptuneテクスチャー読み込み
         var neptunetexture = textureLoader.load("img/neptunemap.jpg");
@@ -267,16 +285,19 @@
         neptune.position.set(1000,0,0);
         neptune.castShadow = true;
         neptune.receiveShadow = true;
-        scene.add(neptune);
+        //scene.add(neptune);
         
         //nep軌道線
         const nepgeometry = new THREE.TorusGeometry( 1000, 0.8, 16, 100 );
         const nepmaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
         const neptorus = new THREE.Mesh( nepgeometry, nepmaterial );
         neptorus.rotation.set(Math.PI/2,0,0);
-        scene.add( neptorus );
+        //scene.add( neptorus );
 
-
+        var nepg =new THREE.Group();
+        nepg.add(neptune);
+        nepg.add(neptorus);
+        scene.add(nepg);
 
         // Asteroid1テクスチャー読み込み  
         var textureLoaderast1 = new THREE.TextureLoader();  
@@ -317,28 +338,37 @@
           scene.add(sprite);
 
         }
-        
-
-
-        
 
         update();
-
         // 毎フレーム時に実行されるループイベント
         function update() {
+          let rad;
+          rad += 1;
+          
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(update);
           //自転
-
+          moon.rotation.y += 0.01;
 
           //公転
-          merg.rotation.y += 0.01;
+          merg.rotation.y += 0.04;
           veng.rotation.y += 0.01;
+          moon.rotation.y += 0.01;
+          
+          
+          earg.rotation.y += 0.01;
+          const world = earth.getWorldPosition(new THREE.Vector3());
+          const worldm = moon.getWorldPosition(new THREE.Vector3());
+          
+          moon.position.z =  world.z +2;
+          moon.position.x =  world.x +2;
+
           marg.rotation.y += 0.01;
           jupg.rotation.y += 0.01;
           satg.rotation.y += 0.01;
-
+          urag.rotation.y += 0.01;
+          nepg.rotation.y += 0.01;
 
         }
       }
