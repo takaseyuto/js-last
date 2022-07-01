@@ -229,7 +229,6 @@
         var satring = new THREE.Mesh(satringGeometry,matsatring);
         satring.position.set(320,0,0);
         satring.rotation.set(Math.PI/2,0,0);
-        //scene.add(satring);
 
         var sat =new THREE.Group();
         sat.add(saturn);
@@ -260,14 +259,12 @@
         uranus.position.set(630,0,0);
         uranus.castShadow = true;
         uranus.receiveShadow = true;
-        //scene.add(uranus);
 
         //ura軌道線
         const urageometry = new THREE.TorusGeometry( 630, 0.7, 16, 100 );
         const uramaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
         const uratorus = new THREE.Mesh( urageometry, uramaterial );
         uratorus.rotation.set(Math.PI/2,0,0);
-        //scene.add( uratorus );
 
         var urag =new THREE.Group();
         urag.add(uranus);
@@ -285,14 +282,12 @@
         neptune.position.set(1000,0,0);
         neptune.castShadow = true;
         neptune.receiveShadow = true;
-        //scene.add(neptune);
         
         //nep軌道線
         const nepgeometry = new THREE.TorusGeometry( 1000, 0.8, 16, 100 );
         const nepmaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
         const neptorus = new THREE.Mesh( nepgeometry, nepmaterial );
         neptorus.rotation.set(Math.PI/2,0,0);
-        //scene.add( neptorus );
 
         var nepg =new THREE.Group();
         nepg.add(neptune);
@@ -349,17 +344,18 @@
           renderer.render(scene, camera);
           requestAnimationFrame(update);
           //自転
+
           moon.rotation.y += 0.01;
+          mercury.rotation.y += 0.01
 
           //公転
-          merg.rotation.y += 0.04;
+          merg.rotation.y += 0.01;
           veng.rotation.y += 0.01;
           moon.rotation.y += 0.01;
           
           
           earg.rotation.y += 0.01;
           const world = earth.getWorldPosition(new THREE.Vector3());
-          const worldm = moon.getWorldPosition(new THREE.Vector3());
           
           moon.position.z =  world.z +2;
           moon.position.x =  world.x +2;
