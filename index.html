@@ -134,7 +134,7 @@
         matmoon.map = moontexture;
 
         // 月を作成
-        var moonGeometry = new THREE.SphereGeometry(1,50,50);
+        var moonGeometry = new THREE.SphereGeometry(0.3,50,50);
         var moon = new THREE.Mesh(moonGeometry,matmoon);
         moon.position.set(47,0,0);
         moon.castShadow = true;
@@ -142,7 +142,7 @@
         scene.add( moon );
 
         //月軌道
-        const moogeometry = new THREE.TorusGeometry( 3, 0.1, 16, 100 );
+        const moogeometry = new THREE.TorusGeometry( 3, 0.05, 16, 100 );
         const moomaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
         const mootorus = new THREE.Mesh( moogeometry, moomaterial );
         mootorus.position.set(50,0,0);
@@ -337,8 +337,6 @@
         update();
         // 毎フレーム時に実行されるループイベント
         function update() {
-          let rad;
-          rad += 1;
           
           // レンダリング
           renderer.render(scene, camera);
@@ -363,8 +361,8 @@
 
           const world = earth.getWorldPosition(new THREE.Vector3());
           
-          moon.position.z =  world.z +2;
-          moon.position.x =  world.x +2;
+          moon.position.z =  world.z +2.05;
+          moon.position.x =  world.x +2.05;
 
           marg.rotation.y += 0.01;
           jupg.rotation.y += 0.01;
