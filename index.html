@@ -81,6 +81,11 @@
         mertorus.rotation.set(Math.PI/2,0,0);
         scene.add( mertorus );
 
+        var merg =new THREE.Group();
+        merg.add(mercury);
+        merg.add(mertorus);
+        scene.add(merg);
+
         // venusテクスチャー読み込み
         var venustexture = textureLoader.load("img/venusmap.jpg");
         var matvenus = new THREE.MeshLambertMaterial();
@@ -100,6 +105,11 @@
         const ventorus = new THREE.Mesh( vengeometry, venmaterial );
         ventorus.rotation.set(Math.PI/2,0,0);
         scene.add( ventorus );
+
+        var veng =new THREE.Group();
+        veng.add(venus);
+        veng.add(ventorus);
+        scene.add(veng);
 
         // earthテクスチャー読み込み 
         var earthtexture = textureLoader.load("img/earth.png");
@@ -154,6 +164,11 @@
         martorus.rotation.set(Math.PI/2,0,0);
         scene.add( martorus );
 
+        var marg =new THREE.Group();
+        marg.add(mars);
+        marg.add(martorus);
+        scene.add(marg);
+
         // jupiterテクスチャー読み込み  
         var jupitertexture = textureLoader.load("img/jupitermap.jpg");
         var matjupiter = new THREE.MeshLambertMaterial();
@@ -173,6 +188,11 @@
         const juptorus = new THREE.Mesh( jupgeometry, jupmaterial );
         juptorus.rotation.set(Math.PI/2,0,0);
         scene.add( juptorus );
+
+        var jupg =new THREE.Group();
+        jupg.add(jupiter);
+        jupg.add(juptorus);
+        scene.add(jupg);
         
         // saturnテクスチャー読み込み
         var saturntexture = textureLoader.load("img/saturnmap.jpg");
@@ -210,6 +230,11 @@
         const sattorus = new THREE.Mesh( satgeometry, satmaterial );
         sattorus.rotation.set(Math.PI/2,0,0);
         scene.add( sattorus );
+
+        var satg =new THREE.Group();
+        satg.add(sat);
+        satg.add(sattorus);
+        scene.add(satg);
 
         // uranusテクスチャー読み込み  
         var uranustexture = textureLoader.load("img/uranusmap.jpg");
@@ -304,6 +329,17 @@
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(update);
+          //自転
+
+
+          //公転
+          merg.rotation.y += 0.01;
+          veng.rotation.y += 0.01;
+          marg.rotation.y += 0.01;
+          jupg.rotation.y += 0.01;
+          satg.rotation.y += 0.01;
+
+
         }
       }
     </script>
