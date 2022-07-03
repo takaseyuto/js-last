@@ -190,7 +190,7 @@
         // 木星を作成
         var jupiterGeometry = new THREE.SphereGeometry(11.2,50,50);
         var jupiter = new THREE.Mesh(jupiterGeometry,matjupiter);
-        jupiter.position.set(167,0,0);
+        jupiter.position.set(0,0,167);
         jupiter.castShadow = true;
         jupiter.receiveShadow = true;
         scene.add(jupiter);
@@ -343,32 +343,32 @@
           requestAnimationFrame(update);
           //自転
 
-          mercury.rotation.y += 0.01;
-          venus.rotation.y += 0.01;
+          mercury.rotation.y += 0.0017;
+          venus.rotation.y += 0.004;
           earth.rotation.y += 0.01;
-          moon.rotation.y += 0.01;
+          moon.rotation.y += 0.0037;
           mars.rotation.y += 0.01;
-          jupiter.rotation.y += 0.01;
-          saturn.rotation.y += 0.01;
-          satring.rotation.z +=0.01;
-          uranus.rotation.y += 0.01;
-          neptune.rotation.y += 0.01;
+          jupiter.rotation.y += 0.25;
+          saturn.rotation.y += 0.25;
+          satring.rotation.z +=0.25;
+          uranus.rotation.y += 0.142;
+          neptune.rotation.y += 0.167;
 
           //公転
-          merg.rotation.y += 0.01;
-          veng.rotation.y += 0.01;
-          earg.rotation.y += 0.003;
+          merg.rotation.y += 0.042;
+          veng.rotation.y += 0.016;
+          earg.rotation.y += 0.01;
 
           const world = earth.getWorldPosition(new THREE.Vector3());
           
           moon.position.z =  world.z +2.05;
           moon.position.x =  world.x +2.05;
 
-          marg.rotation.y += 0.01;
-          jupg.rotation.y += 0.01;
-          satg.rotation.y += 0.001;
-          urag.rotation.y += 0.001;
-          nepg.rotation.y += 0.001;
+          marg.rotation.y += 0.067;
+          jupg.rotation.y += 0.00242;
+          satg.rotation.y += 0.00239;
+          urag.rotation.y += 0.0014;
+          nepg.rotation.y += 0.0015;
 
         }
       }
