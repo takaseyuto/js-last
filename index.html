@@ -5,9 +5,11 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
- <h1>太陽系を作成した</h1>
- 
-実際の縮尺で太陽を作るとあまりにも見づらいので、1/8サイズにしてあります。
+ <h1>太陽系を作成しました</h1>
+  
+  それぞれの惑星の距離・大きさ・自転速度・公転速度の比率は実際の太陽系と同じにしてあります。
+  ただ、太陽のみ実際の大きさで作るとあまりにも見づらいので、1/8サイズにしてあります。
+
 
  <br>
  <script>
@@ -32,7 +34,7 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(-400, 200, 200);
+        camera.position.set(-350, 150, 150);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera, document.body); 
