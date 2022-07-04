@@ -9,6 +9,7 @@
   
   それぞれの惑星の距離・大きさ・自転速度・公転速度の比率は実際の太陽系と同じにしてあります。
   ただ、太陽のみ実際の大きさで作るとあまりにも見づらいので、1/8サイズにしてあります。
+  火星と木星の間にあるのは小惑星帯です。スプライトで作成してあります。
 
 
  <br>
@@ -129,7 +130,6 @@
         eartorus.rotation.set(Math.PI/2,0,0);
         scene.add( eartorus );
 
-
         // moonテクスチャー読み込み
         var moontexture = textureLoader.load("img/moonmap.jpg");
         var matmoon = new THREE.MeshLambertMaterial();
@@ -157,7 +157,6 @@
         earg.add(eartorus);
         earg.add(mootorus);
         scene.add(earg);
-
         
         // marsテクスチャー読み込み  
         var marstexture = textureLoader.load("img/marsmap.jpg");
